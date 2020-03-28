@@ -5,6 +5,7 @@ class FaviconMarquee {
         this.color = params.color;
         this.step = params.step;
         this.font = params.font;
+        this.background = params.background;
         this.pixelsScrolled = 0;
     }
 
@@ -28,7 +29,13 @@ class FaviconMarquee {
     };
 
     draw = () => {
-        this.ctx.clearRect(0, 0, this.size, this.size);
+        if (this.background) {
+            this.ctx.fillStyle = this.background;
+            this.ctx.rect(0, 0, this.size, this.size);
+            this.ctx.fill();
+        } else {
+            this.ctx.clearRect(0, 0, this.size, this.size);
+        }
 
         this.pixelsScrolled += this.step;
         if (this.pixelsScrolled > this.textWidth + 2 * this.size) { // 2 * this.size to begin and end with blank canvas

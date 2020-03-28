@@ -2,10 +2,30 @@
 <!-- Ligma -->
 <head>
     <title>Sten Laane</title>
+    <script src="faviconMarquee.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Aino Headline';
+            src: url("Aino-Headline.otf") format("opentype");
+        }
+    </style>
 </head>
 <body>
     <h1>Sten Laane</h1>
     <img src="./sten-approve-min.gif" width="200" alt="KILL ME NOW"/>
     <p>Welcome to my wobsite</p>
+
+    <script>
+        const props = {
+            text: 'Sten Laane',
+            font: 'Aino Headline',
+            color: '#339966',
+            step: 1,
+            size : 96,
+        };
+
+        const faviconMarquee = new FaviconMarquee(props);
+        faviconMarquee.start(35);
+    </script>
 </body>
 </html>

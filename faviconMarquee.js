@@ -3,9 +3,10 @@ class FaviconMarquee {
         this.size = params.size;
         this.text = params.text;
         this.color = params.color;
-        this.step = params.step;
+        this.step = params.step ?? 1;
         this.font = params.font;
         this.background = params.background;
+        this.paddingBottom = params.paddingBottom;
         this.pixelsScrolled = 0;
     }
 
@@ -45,7 +46,7 @@ class FaviconMarquee {
         const canvasWidthOffset = -1 * this.pixelsScrolled + this.size; // negation of pixelsScrolled because canvas scrolls left-to-right
                                                                         // add this.size to begin rendering with blank canvas
         this.ctx.fillStyle = this.color;
-        this.ctx.fillText(this.text, canvasWidthOffset, this.size);
+        this.ctx.fillText(this.text, canvasWidthOffset, this.size - this.paddingBottom);
 
         this.favicon.href = this.canvas.toDataURL('image/png');
 

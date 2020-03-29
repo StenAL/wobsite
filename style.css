@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Aino Headline';
+    src: url("Aino-Headline.otf") format("opentype");
+    font-display: swap;
+}
+
+html {
+    background: #F0DB4F;
+}
+
+h1, .typed-cursor {
+    font-family: 'Aino Headline', sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.typed-cursor {
+    display: inline-table;
+    /* Why? Because Google Chrome uses hardware acceleration for certain transitions. This means that whenever the typed-cursor
+       element does its blinking animation, a rounded integer value will be used as it's size instead of the actual floating
+       point value. When the typed text is mirrored, i.e. the cursor is to the left of the text, this rounding will mean
+       that everything right of it will suddenly jump by the rounded amount. display: inline-table forces an integer size and fixes this.
+       Thanks, Google
+     */
+}
+
+.mirrored {
+    display: inline-block;
+    transform: scale(-1, 1);
+}

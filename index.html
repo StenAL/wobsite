@@ -2,41 +2,17 @@
 <!-- Ligma -->
 <head>
     <title>Sten Laane</title>
-    <style>
-        @font-face {
-            font-family: 'Aino Headline';
-            src: url("Aino-Headline.otf") format("opentype");
-            font-display: swap;
-        }
-
-        h1 {
-            font-family: 'Aino Headline', sans-serif;
-            font-size: 48px;
-            font-weight: normal;
-        }
-    </style>
+    <link rel="stylesheet", href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="script.js" type="module"></script>
 </head>
 <body>
-    <h1>Sten Laane</h1>
+    <h1><span class="typed"></span></h1>
     <video autoplay loop muted playsinline width="200">
         <source src="sten-approve.webm" type="video/webm">
         <source src="sten-approve.mp4" type="video/mp4">
     </video>
     <p>Welcome to my wobsite</p>
 
-    <script src="faviconMarquee.js"></script>
-    <script>
-        const props = {
-            text: 'Sten Laane 🚀',
-            font: 'Aino Headline',
-            color: '#323330',
-            size : 96,
-            background: "#F0DB4F",
-            paddingBottom: 5,
-        };
-
-        const faviconMarquee = new FaviconMarquee(props);
-        faviconMarquee.start(35);
-    </script>
 </body>
 </html>

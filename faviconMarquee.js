@@ -1,4 +1,4 @@
-class FaviconMarquee {
+export class FaviconMarquee {
     constructor(params) {
         this.size = params.size;
         this.text = params.text;

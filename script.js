@@ -24,22 +24,22 @@ const RandomCaseString = function(text) {
     const randomCaseInput = randomizeStringCase(text);
     const stringObject = new String(randomCaseInput);
     stringObject.display = randomCaseInput;
-    Object.setPrototypeOf(stringObject, RandomCaseString);
+    Object.setPrototypeOf(stringObject, RandomCaseString.prototype);
     return stringObject;
 };
 
-RandomCaseString.substr = function(num, len) {
-    if (num === 0 && len === 0) {
+RandomCaseString.prototype.substr = function(num, len) {
+    if (num === 0 && (len === 0 || len === undefined)) {
         this.display = randomizeStringCase(this.display);
     }
     return this.display.substr(num, len);
 };
 
-RandomCaseString.substring = function(num, len) {
+RandomCaseString.prototype.substring = function(num, len) {
     return this.display.substring(num, len);
 };
 
-RandomCaseString.trim = function() {
+RandomCaseString.prototype.trim = function() {
     return this;
 };
 
@@ -49,9 +49,10 @@ const randomCase2 = new RandomCaseString("Sten Laane^1000");
 
 
 const typedTextProps = {
-    strings: ['Sten Laane^1000', 'Sten Arthur Laane^1000', randomCase1,
-        'Стэн Лаане^1000', '<span class="mirrored">Sten Laane</span>',
-         randomCase2],
+    strings: [
+        'Sten Laane^1000', 'Sten Arthur Laane^1000', randomCase1,
+        'Стэн Лаане^1000', '<span class="mirrored">Sten Laane</span>^1000',
+         randomCase2,],
     showCursor: true,
     smartBackspace: true,
     loop: true,

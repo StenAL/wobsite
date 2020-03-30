@@ -1,3 +1,5 @@
+window.dataLayer=window.dataLayer||[];function n(){dataLayer.push(arguments)}n("js",new Date);n("config","UA-162143380-1");
+
 import {FaviconMarquee} from "./faviconMarquee.js";
 
 const faviconProps = {

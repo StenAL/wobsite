@@ -7,13 +7,14 @@ const faviconProps = {
     text: 'Sten Laane 🚀',
     font: 'Aino Headline',
     color: '#323330',
-    size : 96,
+    size: 32,
+    step: 0.5,
     background: "#F0DB4F",
-    paddingBottom: 5,
+    paddingBottom: 3,
 };
 
 const faviconMarquee = new FaviconMarquee(faviconProps);
-faviconMarquee.start(1000/30);
+faviconMarquee.start(1000/24);
 
 const randomCase1 = new RandomCaseString("Sten Arthur Laane^1000");
 const randomCase2 = new RandomCaseString("Sten Laane^1000");

@@ -12,10 +12,18 @@ export class FaviconMarquee {
 
     start = (interval) => {
         this.favicon = document.createElement('link');
-        this.favicon.type = 'image/png';
+        this.favicon.type = 'image/jpeg';
         this.favicon.rel = 'shortcut icon';
         document.head.appendChild(this.favicon);
+        setInterval(this.draw, interval);
+    };
 
+    /**
+     * A new canvas is created on every render since otherwise (on Chrome)
+     * reusing the old canvas has massive CPU usage creep which results
+     * in 100% CPU usage and the webpage being unusable after ~15 minutes of running
+     */
+    createCanvas = () => {
         this.canvas = document.createElement('canvas');
         this.canvas.width = this.size;
         this.canvas.height = this.size;
@@ -24,12 +32,10 @@ export class FaviconMarquee {
         this.ctx = this.canvas.getContext('2d');
         this.ctx.font = this.size + "px " + this.font;
         this.textWidth = Math.ceil(this.ctx.measureText(this.text).width);
-
-        document.body.appendChild(this.canvas);
-        setInterval(this.draw, interval);
     };
 
     draw = () => {
+        this.createCanvas();
         if (this.background) {
             this.ctx.fillStyle = this.background;
             this.ctx.rect(0, 0, this.size, this.size);
@@ -48,8 +54,7 @@ export class FaviconMarquee {
         this.ctx.fillStyle = this.color;
         this.ctx.fillText(this.text, canvasWidthOffset, this.size - this.paddingBottom);
 
-        this.favicon.href = this.canvas.toDataURL('image/png');
-
+        this.favicon.href = this.canvas.toDataURL('image/png', 0.3);
     }
 }
 

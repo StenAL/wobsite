@@ -29,8 +29,12 @@ const RandomCaseString = function(text) {
 };
 
 RandomCaseString.prototype.substr = function(num, len) {
-    if (num === 0 && (len === 0 || len === undefined)) {
+    if (num === 0 && this.randomize) {
         this.display = randomizeStringCase(this.display);
+        this.randomize = false;
+    }
+    if (num === this.display.length - 5 && len === undefined) {
+        this.randomize = true;
     }
     return this.display.substr(num, len);
 };
@@ -52,6 +56,7 @@ const typedTextProps = {
     strings: [
         'Sten Laane^1000', 'Sten Arthur Laane^1000', randomCase1,
         'Стэн Лаане^1000', '<span class="mirrored">Sten Laane</span>^1000',
+        '<i class="fab fa-github"></i> <a href="https://github.com/StenAL" target="_blank">@StenAL</a>^1000',
          randomCase2,],
     showCursor: true,
     smartBackspace: true,

@@ -24,6 +24,7 @@ const typedTextProps = {
         'Sten Laane^1000', 'Sten Arthur Laane^1000', randomCase1,
         'Стэн Лаане^1000', '<span class="mirrored">Sten Laane</span>^1000',
         '<i class="fab fa-github"></i> <a href="https://github.com/StenAL" target="_blank">@StenAL</a>^1000',
+        '<i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/sten-laane/" target="_blank">sten-laane</a>^1000',
         randomCase2,],
     showCursor: true,
     smartBackspace: true,

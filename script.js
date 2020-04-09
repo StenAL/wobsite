@@ -1,6 +1,5 @@
 window.dataLayer=window.dataLayer||[];function n(){dataLayer.push(arguments)}n("js",new Date);n("config","UA-162143380-1");
 
-import {FaviconMarquee} from "./faviconMarquee.js";
 import {RandomCaseString} from "./typedText.js";
 
 const faviconProps = {
@@ -10,7 +9,7 @@ const faviconProps = {
     size: 32,
     step: 0.5,
     background: "#F0DB4F",
-    paddingBottom: 3,
+    marginBottom: 3,
 };
 
 const faviconMarquee = new FaviconMarquee(faviconProps);

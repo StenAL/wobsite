@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @font-face {
     font-family: 'Aino Headline';
     src: url("Aino-Headline.otf") format("opentype");
     font-display: swap;
 }
 
-html {
+body {
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #F0DB4F;
     color: #323330;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
     text-align: center;
 }
 
@@ -41,4 +47,13 @@ a {
 
 .fa-github, .fa-linkedin {
     color: #323330;
+}
+
+
+footer {
+    margin: auto 0 70px 0;
+}
+
+footer p {
+    color: #979797;
 }

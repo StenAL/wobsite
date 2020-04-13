@@ -55,8 +55,18 @@ a {
     transform: scale(-1, 1);
 }
 
-.fa-github, .fa-linkedin {
-    color: #323330;
+.linkedin-icon, .github-icon {
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+}
+
+.linkedin-icon {
+    top: 0.3125rem;
+}
+
+.github-icon {
+    top: 0.5rem;
 }
 
 .weird-gif {

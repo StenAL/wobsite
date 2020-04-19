@@ -1,6 +1,6 @@
 window.dataLayer=window.dataLayer||[];function n(){dataLayer.push(arguments)}n("js",new Date);n("config","UA-162143380-1");
 
-import {RandomCaseString} from "./typedText.js";
+import {RandomCaseString, github, linkedIn} from "./typedText.js";
 
 const faviconProps = {
     text: 'Sten Laane 🚀',
@@ -17,9 +17,6 @@ faviconMarquee.start(1000/24);
 
 const randomCase1 = new RandomCaseString("Sten Arthur Laane^1000");
 const randomCase2 = new RandomCaseString("Sten Laane^1000");
-const github = '<a href="https://github.com/StenAL" onclick="return false"><img class="github-icon" src="github.svg" alt="GitHub"> @StenAL</a>^1000'
-const linkedIn = '<a href="https://www.linkedin.com/in/sten-laane/" onclick="return false"><img class="linkedin-icon" src="linkedIn.svg" alt="LinkedIn"> sten-laane</a>^1000'
-
 
 const typedTextProps = {
     strings: [

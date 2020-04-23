@@ -5,8 +5,14 @@
     font-display: swap;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html {
     font-size: 16px;
+    height: 100vh;
 }
 
 @media screen and (max-width: 1100px) {
@@ -16,21 +22,25 @@ html {
 }
 
 body {
-    margin-top: 12vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: #F0DB4F;
     color: #323330;
     font-family: Roboto, sans-serif;
     text-align: center;
+    height: 100%;
+}
+
+h1 {
+    padding: 12vh 0 5vh 0;
 }
 
 h1, .typed-cursor {
     font-family: 'Aino Headline', sans-serif;
     font-size: 3rem;
     font-weight: normal;
+    max-height: 3rem;
 }
 
 a {
@@ -72,6 +82,7 @@ a {
 .weird-gif {
     width: 50%;
     max-width: 200px;
+    margin-bottom: 3vh;
 }
 
 footer {

@@ -126,11 +126,16 @@ h2 {
     display: inline-block;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid ivory;
     max-width: 250px;
     backdrop-filter: blur(15px);
     background-blend-mode: exclusion;
     background: rgba(255, 255, 255, 0.25);
+}
+
+.projects ul li:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .projects ul li h3 {

@@ -5,6 +5,16 @@
     font-display: swap;
 }
 
+:root {
+    --bg-color: #F0DB4F;
+    --main-color: #323330;
+    --secondary-color: #C589E8;
+    --dark-color-1: #979797;
+    --dark-color-alpha-1: rgba(255, 255, 255, 0.5);
+    --dark-color-alpha-2: rgba(255, 255, 255, 0.25);
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -26,8 +36,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #F0DB4F;
-    color: #323330;
+    background: var(--bg-color, #F0DB4F);
+    color: var(--main-color, #323330);
     font-family: Roboto, sans-serif;
     text-align: center;
     height: 100%;
@@ -49,7 +59,7 @@ h1, .typed-cursor {
 
 a {
     text-decoration: none;
-    color: #C589E8;
+    color: var(--secondary-color, #C589E8);
 }
 
 .typed-cursor {
@@ -130,12 +140,13 @@ h2 {
     max-width: 250px;
     backdrop-filter: blur(15px);
     background-blend-mode: exclusion;
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--dark-color-alpha-2, rgba(255, 255, 255, 0.25));
+    transition: background-color 0.1s linear;
 }
 
 .projects ul li:hover {
     border-color: white;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--dark-color-alpha-1, rgba(255, 255, 255, 0.5));
 }
 
 .projects ul li h3 {
@@ -157,5 +168,5 @@ footer {
 }
 
 footer p {
-    color: #979797;
+    color: var(--dark-color-1, #979797);
 }

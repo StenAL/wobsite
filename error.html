@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sten Laane</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+        @font-face {
+            font-family: 'Aino Headline';
+            src: url("Aino-Headline.otf") format("opentype");
+            font-display: swap;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Roboto, sans-serif;
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background: #F0DB4F;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            font-family: 'Aino Headline', sans-serif;
+        }
+
+        .highlight {
+            font-size: 3rem;
+            margin-bottom: 10vh;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 1vh;
+        }
+
+        a {
+            font-family: 'Aino Headline', sans-serif;
+            text-decoration: none;
+            color: #C589E8;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="highlight">:(</h1>
+    <h1 class="error"><!--# echo var="status" default="Error: " --> <!--# echo var="status_text" default="Error status not available" --></h1>
+    <h2>Something somewhere is broken. Return to the <a href="https://laane.xyz/" target="_self">main page</a>?</h2>
+</body>
+</html>

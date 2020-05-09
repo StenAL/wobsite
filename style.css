@@ -156,7 +156,7 @@ h2 {
 .weird-gif {
     width: 250px;
     max-width: 50%;
-    position: absolute;
+    position: fixed;
     margin: auto;
     z-index: -1;
     top: 0; left: 0; bottom: 0; right: 0;

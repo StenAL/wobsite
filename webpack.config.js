@@ -9,8 +9,11 @@ module.exports = {
         filename: 'script.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    devServer: {
+        contentBase: "./dist",
+    },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
         new CopyPlugin(
         {
             patterns: [

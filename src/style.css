@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @font-face {
-    font-family: 'Aino Headline';
+    font-family: "Aino Headline";
     src: url("Aino-Headline.otf") format("opentype");
     font-display: swap;
 }
 
 :root {
-    --bg-color: #F0DB4F;
+    --bg-color: #f0db4f;
     --main-color: #323330;
-    --secondary-color: #C589E8;
+    --secondary-color: #c589e8;
     --dark-color-1: #979797;
     --dark-color-alpha-1: rgba(255, 255, 255, 0.5);
     --dark-color-alpha-2: rgba(255, 255, 255, 0.25);
 }
-
 
 * {
     padding: 0;
@@ -36,22 +35,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--bg-color, #F0DB4F);
+    background: var(--bg-color, #f0db4f);
     color: var(--main-color, #323330);
     font-family: Roboto, sans-serif;
     text-align: center;
     height: 100%;
 }
 
-h1, h2, h3, .introduction {
-    font-family: 'Aino Headline', sans-serif;
+h1,
+h2,
+h3,
+.introduction {
+    font-family: "Aino Headline", sans-serif;
 }
 
 h1 {
     padding: 12vh 0 5vh 0;
 }
 
-h1, .typed-cursor {
+h1,
+.typed-cursor {
     font-size: 3rem;
     font-weight: normal;
     max-height: 3rem;
@@ -59,7 +62,7 @@ h1, .typed-cursor {
 
 a {
     text-decoration: none;
-    color: var(--secondary-color, #C589E8);
+    color: var(--secondary-color, #c589e8);
 }
 
 .typed-cursor {
@@ -79,7 +82,8 @@ a {
     transform: scale(-1, 1);
 }
 
-.linkedin-icon, .github-icon {
+.linkedin-icon,
+.github-icon {
     height: 3rem;
     width: 3rem;
     position: relative;
@@ -94,12 +98,14 @@ a {
 }
 
 @media screen and (max-width: 1100px) {
-    h1, .typed-cursor {
+    h1,
+    .typed-cursor {
         font-size: 2.25rem;
         max-height: 2.25rem;
     }
 
-    .linkedin-icon, .github-icon {
+    .linkedin-icon,
+    .github-icon {
         height: 2.25rem;
         width: 2.25rem;
     }
@@ -159,7 +165,10 @@ h2 {
     position: fixed;
     margin: auto;
     z-index: -1;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0.2;
 }
 

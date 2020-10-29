@@ -3,11 +3,9 @@ import Typed from "typed.js";
 import FaviconMarquee from "favicon-marquee";
 
 window.dataLayer = window.dataLayer || [];
-function n() {
-    dataLayer.push(arguments);
-}
-n("js", new Date());
-n("config", "UA-162143380-1");
+function n(){dataLayer.push(arguments);}
+n('js', new Date());
+n('config', 'G-3BTYXW2CW5');
 
 const faviconProps = {
     text: "Sten Laane 🚀",

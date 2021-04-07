@@ -1,5 +1,4 @@
 const CopyPlugin = require("copy-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const path = require("path");
 
@@ -13,7 +12,6 @@ module.exports = {
         contentBase: "./dist",
     },
     plugins: [
-        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new CopyPlugin({
             patterns: [
                 {

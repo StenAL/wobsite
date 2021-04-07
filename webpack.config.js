@@ -1,4 +1,5 @@
 const CopyPlugin = require("copy-webpack-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const path = require("path");
 
@@ -21,4 +22,10 @@ module.exports = {
             ],
         }),
     ],
+    optimization: {
+        minimizer: [
+            `...`,
+            new CssMinimizerPlugin(),
+        ],
+    },
 };

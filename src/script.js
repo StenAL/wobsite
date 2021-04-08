@@ -1,7 +1,9 @@
 import { RandomCaseString, github, linkedIn } from "./typedText.js";
 import Typed from "typed.js";
 import FaviconMarquee from "favicon-marquee";
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
+// Google Analytics setup
 window.dataLayer = window.dataLayer || [];
 function n(){dataLayer.push(arguments);}
 n('js', new Date());

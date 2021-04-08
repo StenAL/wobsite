@@ -7,10 +7,11 @@
 }
 
 :root {
-    --bg-color: #f0db4f;
+    --js-yellow: #f0db4f;
+    --ts-blue: #007acc;
     --main-color: #323330;
     --secondary-color: #c589e8;
-    --dark-color-1: #979797;
+    --dark-color-1: #333333;
     --dark-color-alpha-1: rgba(255, 255, 255, 0.5);
     --dark-color-alpha-2: rgba(255, 255, 255, 0.25);
 }
@@ -23,7 +24,6 @@
 html {
     font-size: 16px;
     min-height: 100vh;
-    height: 100%;
 }
 
 @media screen and (max-width: 1100px) {
@@ -36,8 +36,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--bg-color, #f0db4f);
-    color: var(--main-color, #323330);
     font-family: Roboto, sans-serif;
     text-align: center;
     height: 100%;
@@ -50,15 +48,14 @@ h3,
     font-family: "Aino Headline", sans-serif;
 }
 
-h1 {
-    padding: 12vh 0 5vh 0;
+.page-title {
+    padding: 6vh 0 5vh 0;
 }
 
-h1,
-.typed-cursor {
-    font-size: 3rem;
+.typed-cursor, .page-title {
+    font-size: 2.75rem;
     font-weight: normal;
-    max-height: 3rem;
+    max-height: 2.75rem;
 }
 
 a {
@@ -113,7 +110,7 @@ a {
 }
 
 .introduction {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -174,9 +171,47 @@ h2 {
 }
 
 footer {
-    margin: auto 0 7vh 0;
+    margin: auto 0 5vh 0;
 }
 
 footer p {
     color: var(--dark-color-1, #979797);
+}
+
+.page1 {
+    background: var(--js-yellow);
+}
+
+.spacer {
+    background: linear-gradient(var(--js-yellow), var(--ts-blue));
+    min-height: 30vh;
+}
+
+.page2 {
+    background: var(--ts-blue);
+
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.page, .spacer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(45deg);
+}
+
+.bottom-arrow {
+    position: relative;
+    bottom: 4px;
 }

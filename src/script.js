@@ -1,7 +1,7 @@
 import { RandomCaseString, github, linkedIn } from "./typedText.js";
 import Typed from "typed.js";
 import FaviconMarquee from "favicon-marquee";
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import "@fortawesome/fontawesome-free/css/solid.min.css";
 
 // Google Analytics setup
 window.dataLayer = window.dataLayer || [];
@@ -53,19 +53,21 @@ const typedTextObserver = new MutationObserver(() => {
 
     const typedAnchorElement = typedText.querySelector("a");
     const mirroredText = typedText.querySelector(".mirrored");
-    const typedTextCursor = typedText.parentElement.querySelector(".typed-cursor");
+    const typedTextCursor = typedText.parentElement.querySelector(
+        ".typed-cursor"
+    );
 
     if (!typedText.onmousedown && typedAnchorElement) {
         // Implementing anchor tags manually through onmousedown/onmouseup since browsers don't properly register
         // click events on typed text because of issues with updating the tag contents https://github.com/mattboldt/typed.js/issues/214
         // Other mouse events work properly though so this is a valid workaround
-        typedText.onmousedown = () => typedText.clickedOn = true;
+        typedText.onmousedown = () => (typedText.clickedOn = true);
         typedText.onmouseup = () => {
             if (typedText.clickedOn) {
                 typedText.clickedOn = false;
                 window.open(typedAnchorElement.href, "_blank");
             }
-        }
+        };
     } else if (typedText.onmousedown && !typedAnchorElement) {
         typedText.onmousedown = undefined;
         typedText.onmouseup = undefined;
@@ -83,3 +85,16 @@ const typedTextObserver = new MutationObserver(() => {
 typedTextObserver.observe(document.querySelector(".typed"), observerOptions);
 
 new Typed(".typed", typedTextProps);
+
+document.querySelectorAll(".collapsible").forEach((el) =>
+    el.addEventListener("click", () => {
+        el.classList.toggle("collapsible-active");
+        const content = el.querySelector(".collapsible-content");
+        const arrow = el.querySelector(".arrow");
+        content.style.maxHeight = content.style.maxHeight
+            ? null
+            : content.scrollHeight + "px";
+        arrow.classList.toggle("arrow-right");
+        arrow.classList.toggle("arrow-down");
+    })
+);

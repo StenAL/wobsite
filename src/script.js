@@ -86,8 +86,9 @@ typedTextObserver.observe(document.querySelector(".typed"), observerOptions);
 
 new Typed(".typed", typedTextProps);
 
-document.querySelectorAll(".collapsible").forEach((el) =>
-    el.addEventListener("click", () => {
+document.querySelectorAll(".collapsible").forEach((el) => {
+    const header = el.querySelector(".collapsible-header")
+    header.addEventListener("click", () => {
         el.classList.toggle("collapsible-active");
         const content = el.querySelector(".collapsible-content");
         const arrow = el.querySelector(".arrow");
@@ -96,5 +97,5 @@ document.querySelectorAll(".collapsible").forEach((el) =>
             : content.scrollHeight + "px";
         arrow.classList.toggle("arrow-right");
         arrow.classList.toggle("arrow-down");
-    })
-);
+    });
+});

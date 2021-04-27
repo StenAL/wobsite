@@ -153,8 +153,6 @@ a {
 }
 
 .collapsible {
-    cursor: pointer;
-    display: inline-block;
     border-radius: 3px;
     border: 2px solid ivory;
     padding: 0.25rem 0 0 0.1rem;
@@ -171,8 +169,14 @@ a {
     background: var(--dark-color-alpha-1, rgba(255, 255, 255, 0.6));
 }
 
-.collapsible-active {
-    cursor: inherit;
+.collapsible-header {
+    cursor: pointer;
+    height: 1.3rem;
+}
+
+.collapsible-active .collapsible-header {
+    border-bottom: 2px solid ivory;
+    border-radius: 3px;
 }
 
 .collapsible-content {

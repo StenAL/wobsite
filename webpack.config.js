@@ -1,44 +1,40 @@
-const CopyPlugin = require("copy-webpack-plugin");
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+import CopyPlugin from "copy-webpack-plugin";
 
-const path = require("path");
+import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
 
-module.exports = {
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+export default {
     entry: "./src/script.js",
     output: {
         filename: "script.js",
-        path: path.resolve(__dirname, "dist"),
+        path: resolve(__dirname, "dist"),
+        publicPath: ""  // needed for css-loader
     },
     devtool: "inline-source-map",
     devServer: {
-        contentBase: "./dist",
+        watchFiles: ["src/**/*"]
     },
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-            },
-            {
-                test: /\.(svg|woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-            },
-        ],
+                use: [ // loaders are executed in reverse order
+                    "style-loader",  // 2. This injects any CSS files that are loaded in JS code into the DOM
+                    "css-loader"     // 1. This resolves imports inside CSS files (e.g. importing a font with url())
+                ]
+            }
+        ]
     },
     plugins: [
-        new CopyPlugin({
+        new CopyPlugin({ // copy over non-JS resources to build output
             patterns: [
                 {
-                    from: "*.{html,css,png,webm,mp4,txt,svg,otf}",
-                    context: "src",
-                },
-            ],
-        }),
-    ],
-    optimization: {
-        minimizer: [
-            `...`,
-            new CssMinimizerPlugin(),
-        ],
-    },
+                    from: "*.{html,png,txt}",
+                    context: "src"
+                }
+            ]
+        })
+    ]
 };

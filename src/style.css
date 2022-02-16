@@ -52,7 +52,8 @@ h3,
     padding: 6vh 0 5vh 0;
 }
 
-.typed-cursor, .page-title {
+.typed-cursor,
+.page-title {
     font-size: 2.75rem;
     font-weight: normal;
     max-height: 2.75rem;
@@ -118,7 +119,8 @@ a {
     font-size: 1.5rem;
 }
 
-.projects, .about {
+.projects,
+.about {
     text-align: left;
     margin: 20px;
 }
@@ -165,7 +167,8 @@ a {
     margin-left: 0.25rem;
 }
 
-.collapsible:hover, .collapsible-active {
+.collapsible:hover,
+.collapsible-active {
     background: var(--dark-color-alpha-1, rgba(255, 255, 255, 0.6));
 }
 
@@ -250,7 +253,9 @@ a {
     min-height: 100vh;
 }
 
-.page, .spacer, .container {
+.page,
+.spacer,
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -266,7 +271,7 @@ a {
     border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 5px;
-    transition: transform 0.5s
+    transition: transform 0.5s;
 }
 
 .arrow-small {

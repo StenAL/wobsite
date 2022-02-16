@@ -2,12 +2,15 @@ import { RandomCaseString, github, linkedIn } from "./typedText.js";
 import Typed from "typed.js";
 import FaviconMarquee from "favicon-marquee";
 import "@fortawesome/fontawesome-free/css/solid.min.css";
+import "./style.css";
 
 // Google Analytics setup
 window.dataLayer = window.dataLayer || [];
-function n(){dataLayer.push(arguments);}
-n('js', new Date());
-n('config', 'G-3BTYXW2CW5');
+function n() {
+    dataLayer.push(arguments);
+}
+n("js", new Date());
+n("config", "G-3BTYXW2CW5");
 
 const faviconProps = {
     text: "Sten Laane 🚀",
@@ -87,7 +90,7 @@ typedTextObserver.observe(document.querySelector(".typed"), observerOptions);
 new Typed(".typed", typedTextProps);
 
 document.querySelectorAll(".collapsible").forEach((el) => {
-    const header = el.querySelector(".collapsible-header")
+    const header = el.querySelector(".collapsible-header");
     header.addEventListener("click", () => {
         el.classList.toggle("collapsible-active");
         const content = el.querySelector(".collapsible-content");

@@ -138,7 +138,7 @@ a {
 }
 
 .about ul li::before {
-    font-family: "Font Awesome 5 Free", sans-serif;
+    font: var(--fa-font-solid);
     margin-right: 0.4rem;
 }
 

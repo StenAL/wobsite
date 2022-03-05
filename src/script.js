@@ -2,7 +2,6 @@ import { RandomCaseString, github, linkedIn } from "./typedText.js";
 import Typed from "typed.js";
 import FaviconMarquee from "favicon-marquee";
 import "@fortawesome/fontawesome-free/css/solid.min.css";
-import "./style.css";
 
 // Google Analytics setup
 window.dataLayer = window.dataLayer || [];

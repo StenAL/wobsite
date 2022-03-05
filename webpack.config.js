@@ -31,7 +31,7 @@ export default {
         new CopyPlugin({ // copy over non-JS resources to build output
             patterns: [
                 {
-                    from: "*.{html,png,txt}",
+                    from: "*.{html,png,txt,css,otf}",
                     context: "src"
                 }
             ]

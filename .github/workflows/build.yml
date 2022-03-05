@@ -1,0 +1,33 @@
+name: Build and Publish
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout current repository
+        uses: actions/checkout@v2
+
+      - name: set up Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: npm install
+        run: npm ci
+
+      - name: check formatting (Prettier)
+        run: npm run format
+
+      - name: create production build
+        run: npm run build
+
+      - name: check build is up to date
+        run: if ! git diff --exit-code dist; then exit 1; fi

@@ -1,9 +1,7 @@
 const randomizeStringCase = (string) => {
     return string
         .split("")
-        .map((c) =>
-            Math.round(Math.random()) ? c.toUpperCase() : c.toLowerCase()
-        )
+        .map((c) => (Math.round(Math.random()) ? c.toUpperCase() : c.toLowerCase()))
         .join("");
 };
 

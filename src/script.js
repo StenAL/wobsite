@@ -56,9 +56,7 @@ const typedTextObserver = new MutationObserver(() => {
 
     const typedAnchorElement = typedText.querySelector("a");
     const mirroredText = typedText.querySelector(".mirrored");
-    const typedTextCursor = typedText.parentElement.querySelector(
-        ".typed-cursor"
-    );
+    const typedTextCursor = typedText.parentElement.querySelector(".typed-cursor");
 
     if (!typedText.onmousedown && typedAnchorElement) {
         // Implementing anchor tags manually through onmousedown/onmouseup since browsers don't properly register
@@ -95,9 +93,7 @@ document.querySelectorAll(".collapsible").forEach((el) => {
         el.classList.toggle("collapsible-active");
         const content = el.querySelector(".collapsible-content");
         const arrow = el.querySelector(".arrow");
-        content.style.maxHeight = content.style.maxHeight
-            ? null
-            : content.scrollHeight + "px";
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
         arrow.classList.toggle("arrow-right");
         arrow.classList.toggle("arrow-down");
     });

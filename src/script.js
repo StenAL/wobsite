@@ -3,14 +3,6 @@ import Typed from "typed.js";
 import { FaviconMarquee } from "favicon-marquee";
 import "@fortawesome/fontawesome-free/css/solid.min.css";
 
-// Google Analytics setup
-window.dataLayer = window.dataLayer || [];
-function n() {
-    dataLayer.push(arguments);
-}
-n("js", new Date());
-n("config", "G-3BTYXW2CW5");
-
 const faviconProps = {
     text: "Sten Laane 🚀",
     font: '"Aino Headline", sans-serif',

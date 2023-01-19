@@ -1,6 +1,6 @@
 import { RandomCaseString, github, linkedIn } from "./typedText.js";
 import Typed from "typed.js";
-import FaviconMarquee from "favicon-marquee";
+import { FaviconMarquee } from "favicon-marquee";
 import "@fortawesome/fontawesome-free/css/solid.min.css";
 
 // Google Analytics setup
@@ -13,16 +13,15 @@ n("config", "G-3BTYXW2CW5");
 
 const faviconProps = {
     text: "Sten Laane 🚀",
-    font: "Aino Headline",
+    font: '"Aino Headline", sans-serif',
     color: "#323330",
-    size: 32,
     step: 0.5,
     background: "#F0DB4F",
-    marginBottom: 3,
+    marginBottom: 32,
 };
 
 const faviconMarquee = new FaviconMarquee(faviconProps);
-faviconMarquee.start(1000 / 24);
+faviconMarquee.start();
 
 const randomCase1 = new RandomCaseString("Sten Arthur Laane^1000");
 const randomCase2 = new RandomCaseString("Sten Laane^1000");

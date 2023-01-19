@@ -8,9 +8,10 @@
 
 :root {
     --js-yellow: #f0db4f;
-    --ts-blue: #007acc;
+    --ts-blue: #0065a9;
     --main-color: #323330;
-    --secondary-color: #c977f9;
+    --secondary-color-1: #c977f9;
+    --secondary-color-2: ivory;
     --dark-color-1: #333333;
     --dark-color-alpha-1: rgba(255, 255, 255, 0.6);
     --dark-color-alpha-2: rgba(255, 255, 255, 0.45);
@@ -66,7 +67,6 @@ h3,
 
 a {
     text-decoration: none;
-    color: var(--secondary-color, #c977f9);
 }
 
 .typed-cursor {
@@ -240,6 +240,10 @@ a {
     background: var(--js-yellow);
 }
 
+.page1 a {
+    color: var(--secondary-color-1, #c977f9);
+}
+
 .spacer {
     background: linear-gradient(var(--js-yellow), var(--ts-blue));
     min-height: 30vh;
@@ -247,6 +251,10 @@ a {
 
 .page2 {
     background: var(--ts-blue);
+}
+
+.page2 a {
+    color: var(--secondary-color-2, ivory);
 }
 
 .page {

@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -142,8 +142,8 @@ limitations under the License.
                 --pwa-icon-size: var(--topbar-logo-size);
                 --report-background-color: #fff;
                 --report-border-color-secondary: #ebebeb;
-                --report-font-family-monospace: "Roboto Mono", "Menlo", "dejavu sans mono", "Consolas", "Lucida Console",
-                    monospace;
+                --report-font-family-monospace:
+                    "Roboto Mono", "Menlo", "dejavu sans mono", "Consolas", "Lucida Console", monospace;
                 --report-font-family: Roboto, Helvetica, Arial, sans-serif;
                 --report-font-size: 16px;
                 --report-monospace-font-size: calc(var(--report-font-size) * 0.85);
@@ -1292,7 +1292,9 @@ limitations under the License.
                 margin: 12px;
                 font-size: 14px;
                 cursor: default;
-                transition: transform 0.3s, opacity 0.3s;
+                transition:
+                    transform 0.3s,
+                    opacity 0.3s;
                 transform: translateY(100px);
                 opacity: 0;
                 bottom: 0;
@@ -1474,7 +1476,9 @@ limitations under the License.
                 stroke-linecap: square;
                 transform-origin: 50%;
                 transform: rotate(var(--chevron-angle));
-                transition: transform 300ms, stroke 300ms;
+                transition:
+                    transform 300ms,
+                    stroke 300ms;
             }
 
             .lh-audit-group > summary > .lh-audit-group__summary > .lh-chevron .lh-chevron__line-right,
@@ -2186,13 +2190,61 @@ limitations under the License.
                         width: 5px;
                         height: 5px;
                         border-radius: 2.5px;
-                        box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-                            0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-                            0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-                            0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-                            0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-                            0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
-                        animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards,
+                        box-shadow:
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff,
+                            0 0 #fff;
+                        animation:
+                            1s bang ease-out infinite backwards,
+                            1s gravity ease-in infinite backwards,
                             5s position linear infinite backwards;
                         animation-delay: 1s, 1s, 1s;
                     }
@@ -2207,23 +2259,58 @@ limitations under the License.
 
                     @keyframes bang {
                         to {
-                            box-shadow: -70px -115.67px #47ebbc, -28px -99.67px #eb47a4, 58px -31.67px #7eeb47,
-                                13px -141.67px #eb47c5, -19px 6.33px #7347eb, -2px -74.67px #ebd247,
-                                24px -151.67px #eb47e0, 57px -138.67px #b4eb47, -51px -104.67px #479eeb,
-                                62px 8.33px #ebcf47, -93px 0.33px #d547eb, -16px -118.67px #47bfeb,
-                                53px -84.67px #47eb83, 66px -57.67px #eb47bf, -93px -65.67px #91eb47,
-                                30px -13.67px #86eb47, -2px -59.67px #83eb47, -44px 1.33px #eb47eb,
-                                61px -58.67px #47eb73, 5px -22.67px #47e8eb, -66px -28.67px #ebe247,
-                                42px -123.67px #eb5547, -75px 26.33px #7beb47, 15px -52.67px #a147eb,
-                                36px -51.67px #eb8347, -38px -12.67px #eb5547, -46px -59.67px #47eb81,
-                                78px -114.67px #eb47ba, 15px -156.67px #eb47bf, -36px 1.33px #eb4783,
-                                -72px -86.67px #eba147, 31px -46.67px #ebe247, -68px 29.33px #47e2eb,
-                                -55px 19.33px #ebe047, -56px 27.33px #4776eb, -13px -91.67px #eb5547,
-                                -47px -138.67px #47ebc7, -18px -96.67px #eb47ac, 11px -88.67px #4783eb,
-                                -67px -28.67px #47baeb, 53px 10.33px #ba47eb, 11px 19.33px #5247eb,
-                                -5px -11.67px #eb4791, -68px -4.67px #47eba7, 95px -37.67px #eb478b,
-                                -67px -162.67px #eb5d47, -54px -120.67px #eb6847, 49px -12.67px #ebe047,
-                                88px 8.33px #47ebda, 97px 33.33px #eb8147, 6px -71.67px #ebbc47;
+                            box-shadow:
+                                -70px -115.67px #47ebbc,
+                                -28px -99.67px #eb47a4,
+                                58px -31.67px #7eeb47,
+                                13px -141.67px #eb47c5,
+                                -19px 6.33px #7347eb,
+                                -2px -74.67px #ebd247,
+                                24px -151.67px #eb47e0,
+                                57px -138.67px #b4eb47,
+                                -51px -104.67px #479eeb,
+                                62px 8.33px #ebcf47,
+                                -93px 0.33px #d547eb,
+                                -16px -118.67px #47bfeb,
+                                53px -84.67px #47eb83,
+                                66px -57.67px #eb47bf,
+                                -93px -65.67px #91eb47,
+                                30px -13.67px #86eb47,
+                                -2px -59.67px #83eb47,
+                                -44px 1.33px #eb47eb,
+                                61px -58.67px #47eb73,
+                                5px -22.67px #47e8eb,
+                                -66px -28.67px #ebe247,
+                                42px -123.67px #eb5547,
+                                -75px 26.33px #7beb47,
+                                15px -52.67px #a147eb,
+                                36px -51.67px #eb8347,
+                                -38px -12.67px #eb5547,
+                                -46px -59.67px #47eb81,
+                                78px -114.67px #eb47ba,
+                                15px -156.67px #eb47bf,
+                                -36px 1.33px #eb4783,
+                                -72px -86.67px #eba147,
+                                31px -46.67px #ebe247,
+                                -68px 29.33px #47e2eb,
+                                -55px 19.33px #ebe047,
+                                -56px 27.33px #4776eb,
+                                -13px -91.67px #eb5547,
+                                -47px -138.67px #47ebc7,
+                                -18px -96.67px #eb47ac,
+                                11px -88.67px #4783eb,
+                                -67px -28.67px #47baeb,
+                                53px 10.33px #ba47eb,
+                                11px 19.33px #5247eb,
+                                -5px -11.67px #eb4791,
+                                -68px -4.67px #47eba7,
+                                95px -37.67px #eb478b,
+                                -67px -162.67px #eb5d47,
+                                -54px -120.67px #eb6847,
+                                49px -12.67px #ebe047,
+                                88px 8.33px #47ebda,
+                                97px 33.33px #eb8147,
+                                6px -71.67px #ebbc47;
                         }
                     }
                     @keyframes gravity {
@@ -3065,7 +3152,7 @@ limitations under the License.
                     // Also elide other hash-like mixed-case strings
                     name = name.replace(
                         /([a-zA-Z0-9-_]{9})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9-_]{10,}/g,
-                        `$1${ELLIPSIS}`
+                        `$1${ELLIPSIS}`,
                     );
                     // Also elide long number sequences
                     name = name.replace(/(\d{3})\d{6,}/g, `$1${ELLIPSIS}`);
@@ -3834,7 +3921,7 @@ Copyright © 2019 Javan Makhmali
                                 }
                             }
                         },
-                        false
+                        false,
                     );
                     addEventListener(
                         "keydown",
@@ -3849,7 +3936,7 @@ Copyright © 2019 Javan Makhmali
                                 }
                             }
                         },
-                        false
+                        false,
                     );
                 }
                 function triggerToggle(element) {
@@ -3861,7 +3948,7 @@ Copyright © 2019 Javan Makhmali
                     return (root.tagName == tagName ? [root] : []).concat(
                         typeof root.getElementsByTagName == "function"
                             ? slice.call(root.getElementsByTagName(tagName))
-                            : []
+                            : [],
                     );
                 }
                 function findClosestElementWithTagName(element, tagName) {
@@ -4420,7 +4507,7 @@ Copyright © 2019 Javan Makhmali
                         this._templateContext,
                         this._fullPageScreenshot.screenshot,
                         rect,
-                        maxThumbnailSize
+                        maxThumbnailSize,
                     );
                     if (elementScreenshot) element.prepend(elementScreenshot);
 
@@ -4669,7 +4756,7 @@ Copyright © 2019 Javan Makhmali
                                 segment.startTime,
                                 segment.transferSize,
                                 segment.treeMarkers,
-                                segment.isLastChild
+                                segment.isLastChild,
                             );
                             CRCRenderer.buildTree(dom, tmpl, childSegment, elem, details, detailsRenderer);
                         }
@@ -4692,7 +4779,7 @@ Copyright © 2019 Javan Makhmali
                     dom.find(".lh-crc__longest_duration_label", tmpl).textContent =
                         Util.i18n.strings.crcLongestDurationLabel;
                     dom.find(".lh-crc__longest_duration", tmpl).textContent = Util.i18n.formatMilliseconds(
-                        details.longestChain.duration
+                        details.longestChain.duration,
                     );
 
                     // Construct visual tree.
@@ -4804,7 +4891,7 @@ Copyright © 2019 Javan Makhmali
                 return Util.filterRelevantLines(
                     details.lines,
                     details.lineMessages,
-                    SURROUNDING_LINES_TO_SHOW_WHEN_COLLAPSED
+                    SURROUNDING_LINES_TO_SHOW_WHEN_COLLAPSED,
                 );
             }
 
@@ -4928,7 +5015,7 @@ Copyright © 2019 Javan Makhmali
 
                     // First render messages that don't belong to specific lines
                     details.generalMessages.forEach((m) =>
-                        snippetEl.append(SnippetRenderer.renderMessage(dom, tmpl, m))
+                        snippetEl.append(SnippetRenderer.renderMessage(dom, tmpl, m)),
                     );
                     // Then render the lines and their messages, as well as placeholders where lines are omitted
                     snippetEl.append(SnippetRenderer.renderSnippetLines(dom, tmpl, details));
@@ -4971,7 +5058,7 @@ Copyright © 2019 Javan Makhmali
                         // hasn't been rendered yet then render it now
                         if (showLineWhenCollapsed && hasPendingOmittedLinesPlaceholderForCollapsedState) {
                             lineContainer.append(
-                                SnippetRenderer.renderOmittedLinesPlaceholder(dom, tmpl, LineVisibility.WHEN_COLLAPSED)
+                                SnippetRenderer.renderOmittedLinesPlaceholder(dom, tmpl, LineVisibility.WHEN_COLLAPSED),
                             );
                             hasPendingOmittedLinesPlaceholderForCollapsedState = false;
                         }
@@ -4983,15 +5070,15 @@ Copyright © 2019 Javan Makhmali
                             // In the collapsed state we don't show omitted lines placeholders around
                             // the edges of the snippet
                             const hasRenderedAllLinesVisibleWhenCollapsed = !linesWhenCollapsed.some(
-                                (l) => l.lineNumber > lineNumber
+                                (l) => l.lineNumber > lineNumber,
                             );
                             const onlyShowWhenExpanded = hasRenderedAllLinesVisibleWhenCollapsed || lineNumber === 1;
                             lineContainer.append(
                                 SnippetRenderer.renderOmittedLinesPlaceholder(
                                     dom,
                                     tmpl,
-                                    onlyShowWhenExpanded ? LineVisibility.WHEN_EXPANDED : LineVisibility.ALWAYS
-                                )
+                                    onlyShowWhenExpanded ? LineVisibility.WHEN_EXPANDED : LineVisibility.ALWAYS,
+                                ),
                             );
                             hasPendingOmittedLinesPlaceholderForCollapsedState = false;
                         }
@@ -5032,7 +5119,7 @@ Copyright © 2019 Javan Makhmali
                     const snippetEl = dom.find(".lh-snippet", tmpl);
 
                     const header = SnippetRenderer.renderHeader(dom, tmpl, details, detailsRenderer, () =>
-                        snippetEl.classList.toggle("lh-snippet--expanded")
+                        snippetEl.classList.toggle("lh-snippet--expanded"),
                     );
                     const content = SnippetRenderer.renderSnippetContent(dom, tmpl, details);
                     snippetEl.append(header, content);
@@ -5117,12 +5204,12 @@ Copyright © 2019 Javan Makhmali
                     const screenshotLeftVisibleEdge = clamp(
                         elementRectCenter.x - elementPreviewSizeSC.width / 2,
                         0,
-                        screenshotSize.width - elementPreviewSizeSC.width
+                        screenshotSize.width - elementPreviewSizeSC.width,
                     );
                     const screenshotTopVisisbleEdge = clamp(
                         elementRectCenter.y - elementPreviewSizeSC.height / 2,
                         0,
-                        screenshotSize.height - elementPreviewSizeSC.height
+                        screenshotSize.height - elementPreviewSizeSC.height,
                     );
 
                     return {
@@ -5166,7 +5253,7 @@ Copyright © 2019 Javan Makhmali
                     ];
                     for (const points of polygonsPoints) {
                         clipPathEl.append(
-                            dom.createElementNS("http://www.w3.org/2000/svg", "polygon", undefined, { points })
+                            dom.createElementNS("http://www.w3.org/2000/svg", "polygon", undefined, { points }),
                         );
                     }
                 }
@@ -5234,7 +5321,7 @@ Copyright © 2019 Javan Makhmali
                             templateContext,
                             fullPageScreenshot.screenshot,
                             elementRectSC,
-                            maxLightboxSize
+                            maxLightboxSize,
                         );
 
                         // This would be unexpected here.
@@ -5307,7 +5394,7 @@ Copyright © 2019 Javan Makhmali
                     const positions = ElementScreenshotRenderer.getScreenshotPositions(
                         elementRectSC,
                         elementPreviewSizeSC,
-                        { width: screenshot.width, height: screenshot.height }
+                        { width: screenshot.width, height: screenshot.height },
                     );
 
                     const contentEl = dom.find("div.lh-element-screenshot__content", containerEl);
@@ -5338,7 +5425,7 @@ Copyright © 2019 Javan Makhmali
                         maskEl,
                         positions.clip,
                         elementRectSC,
-                        elementPreviewSizeSC
+                        elementPreviewSizeSC,
                     );
 
                     return containerEl;
@@ -5627,7 +5714,7 @@ Copyright © 2019 Javan Makhmali
                     const hasMetricError =
                         report.categories.performance &&
                         report.categories.performance.auditRefs.some((audit) =>
-                            Boolean(audit.group === "metrics" && report.audits[audit.id].errorMessage)
+                            Boolean(audit.group === "metrics" && report.audits[audit.id].errorMessage),
                         );
                     if (hasMetricError) {
                         const toggleInputEl = this._dom.find("input.lh-metrics-toggle__input", this._document);
@@ -5724,7 +5811,7 @@ Copyright © 2019 Javan Makhmali
                     const tables = Array.from(this._document.querySelectorAll("table.lh-table"));
                     const tablesWithUrls = tables
                         .filter((el) =>
-                            el.querySelector("td.lh-table-column--url, td.lh-table-column--source-location")
+                            el.querySelector("td.lh-table-column--url, td.lh-table-column--source-location"),
                         )
                         .filter((el) => {
                             const containingAudit = el.closest(".lh-audit");
@@ -5801,7 +5888,7 @@ Copyright © 2019 Javan Makhmali
                     ElementScreenshotRenderer.installOverlayFeature(
                         this._dom,
                         this._templateContext,
-                        fullPageScreenshot
+                        fullPageScreenshot,
                     );
                 }
 
@@ -5940,7 +6027,7 @@ Copyright © 2019 Javan Makhmali
                             this._saveFile(
                                 new Blob([jsonStr], {
                                     type: "application/json",
-                                })
+                                }),
                             );
                             break;
                         }
@@ -6161,7 +6248,7 @@ Copyright © 2019 Javan Makhmali
                     // In view = the last category that starts above the middle of the window.
                     const categoryEls = Array.from(this._document.querySelectorAll(".lh-category"));
                     const categoriesAboveTheMiddle = categoryEls.filter(
-                        (el) => el.getBoundingClientRect().top - window.innerHeight / 2 < 0
+                        (el) => el.getBoundingClientRect().top - window.innerHeight / 2 < 0,
                     );
                     const highlightIndex =
                         categoriesAboveTheMiddle.length > 0 ? categoriesAboveTheMiddle.length - 1 : 0;
@@ -6239,7 +6326,7 @@ Copyright © 2019 Javan Makhmali
                             () => {
                                 firstFocusElement.focus();
                             },
-                            { once: true }
+                            { once: true },
                         );
                     }
 
@@ -6360,7 +6447,7 @@ Copyright © 2019 Javan Makhmali
                             }
 
                             return true;
-                        }
+                        },
                     );
 
                     let nextIndex = startNode ? nodes.indexOf(startNode) + 1 : 0;
@@ -7189,7 +7276,7 @@ Copyright © 2019 Javan Makhmali
                     const passedAudits = category.auditRefs.filter(
                         (audit) =>
                             (audit.group === "load-opportunities" || audit.group === "diagnostics") &&
-                            Util.showAsPassed(audit.result)
+                            Util.showAsPassed(audit.result),
                     );
 
                     if (!passedAudits.length) return element;
@@ -7665,14 +7752,14 @@ Copyright © 2019 Javan Makhmali
                         const scoreScale = this._dom.cloneTemplate("#tmpl-lh-scorescale", this._templateContext);
                         const scoresContainer = this._dom.find(".lh-scores-container", headerContainer);
                         scoreHeader.append(
-                            ...this._renderScoreGauges(report, categoryRenderer, specificCategoryRenderers)
+                            ...this._renderScoreGauges(report, categoryRenderer, specificCategoryRenderers),
                         );
                         scoresContainer.appendChild(scoreHeader);
                         scoresContainer.appendChild(scoreScale);
 
                         const stickyHeader = this._dom.createElement("div", "lh-sticky-header");
                         stickyHeader.append(
-                            ...this._renderScoreGauges(report, categoryRenderer, specificCategoryRenderers)
+                            ...this._renderScoreGauges(report, categoryRenderer, specificCategoryRenderers),
                         );
                         reportContainer.appendChild(stickyHeader);
                     }

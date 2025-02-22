@@ -20,8 +20,6 @@
     "devDependencies": {
         "copy-webpack-plugin": "^10.2.4",
         "css-loader": "^6.7.3",
-        "husky": "^4.3.8",
-        "lint-staged": "^13.1.0",
         "prettier": "^2.8.3",
         "style-loader": "^3.3.1",
         "webpack": "^5.75.0",
@@ -33,13 +31,5 @@
         "url": "git+https://github.com/StenAL/wobsite.git"
     },
     "author": "Sten Laane <sten@laane.xyz> (https://laane.xyz)",
-    "license": "MIT",
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.{js,css,md}": "prettier --write"
-    }
+    "license": "MIT"
 }

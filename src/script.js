@@ -7,7 +7,7 @@ const faviconProps = {
     text: "Sten Laane 🚀",
     font: '"Aino Headline", sans-serif',
     color: "#323330",
-    step: 0.5,
+    step: 1.5,
     background: "#F0DB4F",
     marginBottom: 32,
 };
@@ -76,15 +76,3 @@ const typedTextObserver = new MutationObserver(() => {
 typedTextObserver.observe(document.querySelector(".typed"), observerOptions);
 
 new Typed(".typed", typedTextProps);
-
-document.querySelectorAll(".collapsible").forEach((el) => {
-    const header = el.querySelector(".collapsible-header");
-    header.addEventListener("click", () => {
-        el.classList.toggle("collapsible-active");
-        const content = el.querySelector(".collapsible-content");
-        const arrow = el.querySelector(".arrow");
-        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-        arrow.classList.toggle("arrow-right");
-        arrow.classList.toggle("arrow-down");
-    });
-});

@@ -140,6 +140,8 @@ a {
 .about ul li::before {
     font: var(--fa-font-solid);
     margin-right: 0.4rem;
+    display: inline-block;
+    min-width: 15px;
 }
 
 .about ul li.education::before {
@@ -152,39 +154,6 @@ a {
 
 .about ul li.fun::before {
     content: "\f135";
-}
-
-.collapsible {
-    border-radius: 3px;
-    border: 2px solid ivory;
-    padding: 0.25rem 0 0 0.1rem;
-    background: var(--dark-color-alpha-2, rgba(255, 255, 255, 0.45));
-    transition: max-height 0.5s;
-    overflow: hidden;
-}
-
-.collapsible span {
-    margin-left: 0.25rem;
-}
-
-.collapsible:hover,
-.collapsible-active {
-    background: var(--dark-color-alpha-1, rgba(255, 255, 255, 0.6));
-}
-
-.collapsible-header {
-    cursor: pointer;
-    height: 1.3rem;
-}
-
-.collapsible-active .collapsible-header {
-    border-bottom: 2px solid ivory;
-    border-radius: 3px;
-}
-
-.collapsible-content {
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
 }
 
 .projects {

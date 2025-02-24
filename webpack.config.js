@@ -1,15 +1,12 @@
 import CopyPlugin from "copy-webpack-plugin";
 
-import { dirname, resolve } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+import { resolve } from "path";
 
 export default {
     entry: "./src/script.js",
     output: {
         filename: "script.js",
-        path: resolve(__dirname, "dist"),
+        path: resolve(import.meta.dirname, "dist"),
         publicPath: ""  // needed for css-loader
     },
     devtool: "inline-source-map",
